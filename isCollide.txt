@@ -1,0 +1,15 @@
+public boolean isCollide(Object item){
+
+    int itemEndX, itemEndY; 
+    int endX, endY;
+    midX = (xPos + width) / 2;
+    midY = (yPos + height) / 2;
+    itemEndX = item.xPos + item.width;
+    itemEndY = item.yPos + item.height;
+	
+    if ((midX >= item.xPos && midX <= itemEndX) ||
+	  (midY > item.yPos && midY < itemEndY)) {
+    	return true;
+    }
+    return false;
+}
